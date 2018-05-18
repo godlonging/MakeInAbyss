@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class OpenHelper extends SQLiteOpenHelper{
+    private static final int version = 1;
     public static final String CREATE_USER = "create table User ("
             + "id integer primary key autoincrement, "
             + "username text, "
@@ -17,7 +18,8 @@ public class OpenHelper extends SQLiteOpenHelper{
     }
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+            sqLiteDatabase.execSQL(CREATE_USER);
+            System.out.println("create");
     }
 
     @Override

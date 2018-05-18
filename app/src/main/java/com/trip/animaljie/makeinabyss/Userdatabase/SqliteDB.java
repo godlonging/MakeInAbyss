@@ -9,21 +9,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class sqliteDB {
+public class SqliteDB {
     /**
      * 数据库名
      */
-    public static final String DB_NAME = "sqlite_dbname";
+    public static final String DB_NAME = "sqlite_dbname.db";
     /**
      * 数据库版本
      */
     public static final int VERSION = 1;
 
-    private static sqliteDB sqliteDB;
+    private static SqliteDB sqliteDB;
 
     private SQLiteDatabase db;
 
-    private sqliteDB(Context context) {
+    private SqliteDB(Context context) {
         OpenHelper dbHelper = new OpenHelper(context, DB_NAME, null, VERSION);
         db = dbHelper.getWritableDatabase();
     }
@@ -32,9 +32,10 @@ public class sqliteDB {
      * 获取SqliteDB实例
      * @param context
      */
-    public synchronized static sqliteDB getInstance(Context context) {
+    public synchronized static SqliteDB getInstance(Context context) {
+
         if (sqliteDB == null) {
-            sqliteDB = new sqliteDB(context);
+            sqliteDB = new SqliteDB(context);
         }
         return sqliteDB;
     }
