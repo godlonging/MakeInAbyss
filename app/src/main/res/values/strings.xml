@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MakeInAbyss</string>
+    <string name="login">Account</string>
+    <string name="password">Password</string>
+    <string name="auto">AutoLogin</string>
+    <string name="remember">Remember</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sing_up">Sign Up</string>
+</resources>
