@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TrainActivity">
+
+    <com.donkingliang.banner.CustomBanner
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:indicatorStyle="ORDINARY"
+        app:indicatorGravity="CENTER"
+        app:indicatorSelectRes="@drawable/shape_point_select"
+        app:indicatorUnSelectRes="@drawable/shape_point_unselect"
+        app:indicatorInterval="5dp"/>
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/Form"
+            android:layout_width="180dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="Form"
+            android:clickable="true"
+            android:textSize="30sp"/>
+        <ImageButton
+            android:id="@+id/swap"
+            android:layout_centerInParent="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/swap"/>
+        <TextView
+            android:id="@+id/To"
+            android:layout_alignParentRight="true"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:textSize="30sp"
+            android:clickable="true"
+            android:text="To"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/date"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/date"/>
+        <TextView
+            android:id="@+id/select_date"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="select date"
+            android:textSize="30sp"
+            android:gravity="center_horizontal"
+            android:clickable="true"/>
+    </RelativeLayout>
+    <com.dd.morphingbutton.MorphingButton
+        android:id="@+id/search"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttontheme"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:text="Search"
+        android:textSize="20dp"
+        />
+
+
+
+</LinearLayout>

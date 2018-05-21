@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".TripActivity">-->
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.loopeer.cardstack.CardStackView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardstackview"/>
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@color/color_1"
+            android:text="Pre"
+            android:onClick="onPreClick"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:onClick="onNextClick"/>
+    </LinearLayout>
+</merge>
+<!--</android.support.constraint.ConstraintLayout>-->
