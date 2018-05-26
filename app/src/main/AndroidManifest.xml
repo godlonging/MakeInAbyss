@@ -24,7 +24,11 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".TrainActivity" />
         <activity android:name=".ListViewAdapter.FunctionAdapter" />
-        <activity android:name=".TripActivity"></activity>
+        <activity android:name=".TripActivity" />
+        <activity android:name=".WeatherActivity"></activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBE74rJ-yZlciE3i50HIftD4bTPv9wPX2c"/>
     </application>
 
 </manifest>

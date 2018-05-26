@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
                         Intent train = new Intent(MainActivity.this,TrainActivity.class);
                         startActivity(train);
                         break;
+
+
                 }
             }
         });

@@ -12,7 +12,9 @@ import com.loopeer.cardstack.CardStackView;
 import com.loopeer.cardstack.UpDownAnimatorAdapter;
 import com.loopeer.cardstack.UpDownStackAnimatorAdapter;
 import com.trip.animaljie.makeinabyss.CardStackViewAdapter.CardViewAdapter;
+import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TripActivity extends AppCompatActivity implements CardStackView.ItemExpendListener {
@@ -48,6 +50,8 @@ public class TripActivity extends AppCompatActivity implements CardStackView.Ite
             R.color.color_25,
             R.color.color_26
     };
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -81,6 +85,10 @@ public class TripActivity extends AppCompatActivity implements CardStackView.Ite
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trip);
+        final ArrayList<Integer> card_image = new ArrayList<>();
+        card_image.add(R.drawable.train);
+        card_image.add(R.drawable.trip);
+
         mStackView = (CardStackView) findViewById(R.id.cardstackview);
         mActionButtonContainer = (LinearLayout) findViewById(R.id.button_container);
         mStackView.setItemExpendListener(this);
@@ -90,7 +98,7 @@ public class TripActivity extends AppCompatActivity implements CardStackView.Ite
                 new Runnable() {
                     @Override
                     public void run() {
-                        mTestStackAdapter.updateData(Arrays.asList(TEST_DATAS));
+                        mTestStackAdapter.updateData(Arrays.asList(TEST_DATAS),card_image);
                     }
                 }
                 , 200
