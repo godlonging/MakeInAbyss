@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
                         Intent train = new Intent(MainActivity.this,TrainActivity.class);
                         startActivity(train);
                         break;
+                    case 2:
+                        Intent weather = new Intent(MainActivity.this,WeatherActivity.class);
+                        startActivity(weather);
 
 
                 }
@@ -50,5 +53,7 @@ public class MainActivity extends AppCompatActivity {
         functionBeanList.add(trip);
         FunctionBean train = new FunctionBean(R.drawable.train);
         functionBeanList.add(train);
+        FunctionBean weather = new FunctionBean(R.drawable.buttontheme);
+        functionBeanList.add(weather);
     }
 }
