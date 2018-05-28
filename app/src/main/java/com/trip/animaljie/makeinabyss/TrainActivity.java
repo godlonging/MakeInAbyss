@@ -36,6 +36,9 @@ public class TrainActivity extends AppCompatActivity {
     private TextView selectdate;
     private MorphingButton search;
     private boolean click;
+    public String to;
+    public String form;
+    public String times;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,7 @@ public class TrainActivity extends AppCompatActivity {
         swap=(ImageButton)findViewById(R.id.swap);
         selectdate=(TextView)findViewById(R.id.select_date);
         search =(MorphingButton)findViewById(R.id.search);
+
 
         CityListLoader.getInstance().loadCityData(this);
         ArrayList<String> images = new ArrayList<>();
@@ -86,6 +90,7 @@ public class TrainActivity extends AppCompatActivity {
                     public void onTimeSelect(Date date, View v) {
                         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
                         String time = format.format(date);
+                        times = time;
                         selectdate.setText(time);
                         Toast.makeText(TrainActivity.this, time, Toast.LENGTH_SHORT).show();
                     }
@@ -106,6 +111,14 @@ public class TrainActivity extends AppCompatActivity {
                         .colorPressed(R.color.liji_material_red_700) // pressed state color
                         .icon(R.drawable.ic_done);
                 search.morph(circle);
+
+                Intent ticket = new Intent(TrainActivity.this,TicketActivity.class);
+                startActivity(ticket);
+
+                ticket.putExtra("to",to);
+                ticket.putExtra("from",form);
+                ticket.putExtra("date",times);
+                startActivityForResult(ticket,1);
             }
         });
 
@@ -123,13 +136,17 @@ public class TrainActivity extends AppCompatActivity {
 
                 CityInfoBean cityInfoBean = (CityInfoBean) bundle.getParcelable("cityinfo");
 
+
                 if (null == cityInfoBean) {
                     return;
                 }
                 if(click==true){
-                    form_text.setText(""+cityInfoBean.getName());}
+                    form_text.setText(""+cityInfoBean.getName());
+                    form = cityInfoBean.getName()+"";
+                }
                 if(click==false){
                     to_text.setText(""+cityInfoBean.getName());
+                    to = cityInfoBean.getName()+"";
                 }
 
 
