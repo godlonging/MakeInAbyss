@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff">
-    <!--==================================付款详情================================-->
+
     <RelativeLayout
         android:id="@+id/re_pay_detail"
         android:layout_width="match_parent"
@@ -178,7 +178,7 @@
 
     </RelativeLayout>
 
-    <!--=================================付款方式======================================-->
+
     <LinearLayout
         android:id="@+id/lin_pay_way"
         android:layout_width="match_parent"
@@ -288,7 +288,7 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-    <!--====================================支付密码=========================================-->
+
     <LinearLayout
         android:id="@+id/lin_pass"
         android:layout_width="match_parent"

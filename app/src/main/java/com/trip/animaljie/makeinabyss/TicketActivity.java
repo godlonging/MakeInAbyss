@@ -6,6 +6,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -37,6 +38,13 @@ public class TicketActivity extends AppCompatActivity {
                 TicketAdapter adapter = new TicketAdapter(TicketActivity.this,R.layout.ticket_layout,ticketBeanList);
                 ListView listView=findViewById(R.id.lv);
                 listView.setAdapter(adapter);
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        Intent intent = new Intent(TicketActivity.this,PayActivity.class);
+                        startActivity(intent);
+                    }
+                });
                 adapter.notifyDataSetChanged();
 
                 System.out.println("listviewfinish");

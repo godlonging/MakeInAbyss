@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="seat">
+        <item>商务座</item>
+        <item>特等座</item>
+        <item>一等座</item>
+        <item>二等座</item>
+        <item>软座</item>
+        <item>硬座</item>
+        <item>高级软卧</item>
+        <item>软卧</item>
+        <item>硬卧</item>
+        <item>无座</item>
+        <item>其他</item>
+    </string-array>
+</resources>

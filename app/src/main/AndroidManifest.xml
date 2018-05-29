@@ -32,7 +32,8 @@
             android:value="AIzaSyBE74rJ-yZlciE3i50HIftD4bTPv9wPX2c" />
 
         <activity android:name=".TicketActivity" />
-        <activity android:name=".PayActivity"></activity>
+        <activity android:name=".PayActivity" />
+        <activity android:name=".SuccessActivity"></activity>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.graphics.PorterDuff;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +18,7 @@ import java.util.List;
 
 public class CardViewAdapter extends StackAdapter {
     private ArrayList<Integer> card_images;
+    private ArrayList<String> infroamtion;
 
     public CardViewAdapter(Context context) {
         super(context);
@@ -27,8 +29,9 @@ public class CardViewAdapter extends StackAdapter {
         return R.layout.cardview_layout;
     }
 
-    public void updateData(List data, ArrayList<Integer> images) {
+    public void updateData(List data, ArrayList<Integer> images,ArrayList<String> info) {
         this.card_images = images;
+        this.infroamtion = info;
         updateData(data);
     }
 
@@ -36,7 +39,7 @@ public class CardViewAdapter extends StackAdapter {
     public void bindView(Object data, int position, CardStackView.ViewHolder holder) {
         if (holder instanceof ColorItemViewHolder) {
             ColorItemViewHolder h = (ColorItemViewHolder) holder;
-            h.onBind((Integer)data, position,card_images);
+            h.onBind((Integer)data, position,card_images,infroamtion);
 
         }
     }
@@ -73,6 +76,7 @@ public class CardViewAdapter extends StackAdapter {
         View mContainerContent;
         TextView mTextTitle;
         ImageView imageView;
+        TextView infos;
 
         public ColorItemViewHolder(View view) {
             super(view);
@@ -80,16 +84,18 @@ public class CardViewAdapter extends StackAdapter {
             mContainerContent = view.findViewById(R.id.container_list_content);
             mTextTitle = view.findViewById(R.id.text_list_card_title);
             imageView = view.findViewById(R.id.trip_image);
+            infos = view.findViewById(R.id.text_view);
         }
 
         @Override
         public void onItemExpand(boolean b) {
             mContainerContent.setVisibility(b ? View.VISIBLE : View.GONE);
         }
-        public void onBind(Integer data, int position,ArrayList<Integer> card_images) {
+        public void onBind(Integer data, int position,ArrayList<Integer> card_images,ArrayList<String> info) {
             mLayout.getBackground().setColorFilter(ContextCompat.getColor(getContext(), data), PorterDuff.Mode.SRC_IN);
             mTextTitle.setText(String.valueOf(position));
-            imageView.setImageResource((Integer)card_images.get(0));
+            imageView.setImageResource((Integer)card_images.get(position));
+            infos.setText(info.get(position));
 
         }
 

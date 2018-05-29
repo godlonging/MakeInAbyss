@@ -1,5 +1,6 @@
 package com.trip.animaljie.makeinabyss;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -39,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
                 if (result==1)
                 {
                     Toast.makeText(LoginActivity.this,"success",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                    startActivity(intent);
                 }
                 else if (result==0){
                     Toast.makeText(LoginActivity.this,"invail",Toast.LENGTH_SHORT).show();

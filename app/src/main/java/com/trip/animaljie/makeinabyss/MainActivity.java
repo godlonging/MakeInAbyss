@@ -41,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
                     case 2:
                         Intent weather = new Intent(MainActivity.this,WeatherActivity.class);
                         startActivity(weather);
+                        break;
+                    case 3:
+                        Intent trip = new Intent(MainActivity.this,LoginActivity.class);
+                        startActivity(trip);
+                        break;
 
 
                 }
@@ -53,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
         functionBeanList.add(trip);
         FunctionBean train = new FunctionBean(R.drawable.train);
         functionBeanList.add(train);
-        FunctionBean weather = new FunctionBean(R.drawable.buttontheme);
+        FunctionBean weather = new FunctionBean(R.drawable.weather);
         functionBeanList.add(weather);
+        FunctionBean login = new FunctionBean(R.drawable.accout);
+        functionBeanList.add(login);
     }
 }

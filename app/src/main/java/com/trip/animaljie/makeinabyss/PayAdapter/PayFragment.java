@@ -3,6 +3,7 @@ package com.trip.animaljie.makeinabyss.PayAdapter;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -23,8 +24,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.trip.animaljie.makeinabyss.R;
-
-
+import com.trip.animaljie.makeinabyss.SuccessActivity;
 
 
 public class PayFragment extends DialogFragment {
@@ -69,6 +69,8 @@ public class PayFragment extends DialogFragment {
                         if(!TextUtils.isEmpty(gridPasswordView.getText().toString().trim())){
                             if("123456".equals(gridPasswordView.getText().toString().trim())){
                                 //TODO 跳转支付宝支付
+                                Intent intent = new Intent(getActivity(),SuccessActivity.class);
+                                startActivity(intent);
                             }
                         }
                     }else{
@@ -123,10 +125,12 @@ public class PayFragment extends DialogFragment {
                     LinPayWay.setVisibility(View.GONE);
                     break;
                 case R.id.btn_confirm_pay:
-                    rePayDetail.startAnimation(slide_left_to_left);
-                    rePayDetail.setVisibility(View.GONE);
-                    linPass.startAnimation(slide_right_to_left);
-                    linPass.setVisibility(View.VISIBLE);
+                    //rePayDetail.startAnimation(slide_left_to_left);
+                    //rePayDetail.setVisibility(View.GONE);
+                    //linPass.startAnimation(slide_right_to_left);
+                    //linPass.setVisibility(View.VISIBLE);
+                    Intent intent = new Intent(getActivity(),SuccessActivity.class);
+                    startActivity(intent);
                     break;
                 case R.id.close_one:
                     getDialog().dismiss();
