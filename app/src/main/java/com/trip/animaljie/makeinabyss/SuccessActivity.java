@@ -17,7 +17,7 @@ public class SuccessActivity extends AppCompatActivity {
         returnmain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SuccessActivity.this,MainActivity.class);
+                Intent intent = new Intent(SuccessActivity.this,WeatherActivity.class);
                 startActivity(intent);
             }
         });

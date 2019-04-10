@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,6 +28,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
+import java.util.Random;
 
 public class TrainActivity extends AppCompatActivity {
     private CustomBanner<String> mBanner;
@@ -39,6 +41,13 @@ public class TrainActivity extends AppCompatActivity {
     public String to;
     public String form;
     public String times;
+    private Button like_1;
+    private Button like_2;
+    private Button like_3;
+    private Button like_4;
+    private Button like_5;
+    private Button like_6;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +59,12 @@ public class TrainActivity extends AppCompatActivity {
         swap=(ImageButton)findViewById(R.id.swap);
         selectdate=(TextView)findViewById(R.id.select_date);
         search =(MorphingButton)findViewById(R.id.search);
+        like_1 = (Button)findViewById(R.id.like_1);
+        like_2 = (Button)findViewById(R.id.like_2);
+        like_3 = (Button)findViewById(R.id.like_3);
+        like_4 = (Button)findViewById(R.id.like_4);
+        like_5 = (Button)findViewById(R.id.like_5);
+        like_6 = (Button)findViewById(R.id.like_6);
 
 
         CityListLoader.getInstance().loadCityData(this);
@@ -121,6 +136,22 @@ public class TrainActivity extends AppCompatActivity {
                 startActivityForResult(ticket,1);
             }
         });
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("username");
+        switch (name) {
+            case "123456":
+                String[] local = new String[]{"哈尔滨","黑龙江"};
+                Random ran = new Random(1);
+                int number = ran.nextInt(2);
+                like_1.setText(local[number]);
+                break;
+            case"yxy":
+                like_2.setText("成都");
+                break;
+            case "justin":
+                like_3.setText("洛杉矶");
+
+        }
 
     }
 

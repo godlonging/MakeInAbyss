@@ -76,6 +76,70 @@
         android:text="Search"
         android:textSize="20dp"
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/like"
+        android:text="猜你喜欢"/>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/like_1"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="北京"
+            android:background="@drawable/buttontheme_1"/>
+
+        <Button
+            android:id="@+id/like_2"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:text="上海"
+            android:background="@drawable/buttontheme_2"/>
+
+        <Button
+            android:id="@+id/like_3"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:text="广州"
+            android:background="@drawable/buttontheme_3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="深圳"
+            android:background="@drawable/buttontheme_4"
+            android:id="@+id/like_4"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:text="成都"
+            android:background="@drawable/buttontheme_5"
+            android:id="@+id/like_5"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:text="杭州"
+            android:background="@drawable/buttontheme_6"
+            android:id="@+id/like_6"/>
+    </LinearLayout>
+
 
 
 

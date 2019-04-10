@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         Intent train = new Intent(MainActivity.this,TrainActivity.class);
+                        Intent intent = getIntent();
+                        String name = intent.getStringExtra("username");
+                        train.putExtra("username",name);
                         startActivity(train);
                         break;
                     case 2:
