@@ -18,7 +18,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText password;
     private Button sign_in;
     private Button sign_up;
-    private CheckBox show;
+    private Button trail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +28,8 @@ public class LoginActivity extends AppCompatActivity {
         password = (EditText)findViewById(R.id.login_password);
         sign_in = (Button)findViewById(R.id.login_button);
         sign_up = (Button)findViewById(R.id.sign_button);
-        show = (CheckBox)findViewById(R.id.show_password);
+        trail = (Button)findViewById(R.id.try_button);
+
 
 
         sign_in.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +82,17 @@ public class LoginActivity extends AppCompatActivity {
 
             }
 
+        });
+
+        trail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = "default";
+                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                intent.putExtra("username",name);
+                startActivity(intent);
+
+            }
         });
 
     }

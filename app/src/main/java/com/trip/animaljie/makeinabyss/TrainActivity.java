@@ -41,6 +41,7 @@ public class TrainActivity extends AppCompatActivity {
     public String to;
     public String form;
     public String times;
+    public String name = "default";
     private Button like_1;
     private Button like_2;
     private Button like_3;
@@ -136,8 +137,12 @@ public class TrainActivity extends AppCompatActivity {
                 startActivityForResult(ticket,1);
             }
         });
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("username");
+        try {
+            Intent intent = getIntent();
+            name = intent.getStringExtra("username");
+        }catch (Exception e){
+            name = "default";
+        }
         switch (name) {
             case "123456":
                 String[] local = new String[]{"哈尔滨","黑龙江"};
@@ -150,6 +155,9 @@ public class TrainActivity extends AppCompatActivity {
                 break;
             case "justin":
                 like_3.setText("洛杉矶");
+                break;
+            case "default":
+                break;
 
         }
 

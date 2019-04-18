@@ -34,7 +34,8 @@
         <activity android:name=".TicketActivity" />
         <activity android:name=".PayActivity" />
         <activity android:name=".SuccessActivity" />
-        <activity android:name=".CarActivity"></activity>
+        <activity android:name=".CarActivity" />
+        <activity android:name=".InfoActivity"></activity>
     </application>
 
 </manifest>

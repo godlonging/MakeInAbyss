@@ -36,17 +36,22 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         Intent train = new Intent(MainActivity.this,TrainActivity.class);
-                        Intent intent = getIntent();
-                        String name = intent.getStringExtra("username");
-                        train.putExtra("username",name);
-                        startActivity(train);
+                        try{
+                            Intent intent = getIntent();
+                            String name = intent.getStringExtra("username");
+                            train.putExtra("username",name);
+                        }catch (Exception e){
+                            startActivity(train);
+                        }finally{
+                            startActivity(train);
+                        }
                         break;
                     case 2:
                         Intent weather = new Intent(MainActivity.this,WeatherActivity.class);
                         startActivity(weather);
                         break;
                     case 3:
-                        Intent trip = new Intent(MainActivity.this,LoginActivity.class);
+                        Intent trip = new Intent(MainActivity.this,InfoActivity.class);
                         startActivity(trip);
                         break;
 
