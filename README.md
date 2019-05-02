@@ -7,3 +7,4 @@
 <br>4.Ticket query activity
 <br>5.weather query activity
 <br>6.pay activity
+<br>7.car activity
