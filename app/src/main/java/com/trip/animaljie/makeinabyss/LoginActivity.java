@@ -71,6 +71,9 @@ public class LoginActivity extends AppCompatActivity {
                 if (result==1){
                     Toast.makeText(LoginActivity.this,"success",Toast.LENGTH_LONG).show();
                     System.out.println("success");
+                    Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                    intent.putExtra("username",name);
+                    startActivity(intent);
                 }else  if (result==-1)
                 {
                     Toast.makeText(LoginActivity.this,"already",Toast.LENGTH_SHORT).show();
