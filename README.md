@@ -8,3 +8,4 @@
 <br>5.weather query activity
 <br>6.pay activity
 <br>7.car activity
+<br>8.register activity
