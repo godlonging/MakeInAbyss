@@ -50,6 +50,8 @@ public class TrainActivity extends AppCompatActivity {
     private Button like_6;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +100,43 @@ public class TrainActivity extends AppCompatActivity {
                 to_text.setText(tmptext);
             }
         });
+        like_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                to_text.setText(like_1.getText());
+            }
+        });
+        like_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                to_text.setText(like_2.getText());
+            }
+        });
+        like_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                to_text.setText(like_3.getText());
+            }
+        });
+        like_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                to_text.setText(like_4.getText());
+            }
+        });
+        like_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                to_text.setText(like_5.getText());
+            }
+        });
+        like_6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                to_text.setText(like_6.getText());
+            }
+        });
+
         selectdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -151,12 +190,39 @@ public class TrainActivity extends AppCompatActivity {
                 like_1.setText(local[number]);
                 break;
             case"yxy":
-                like_2.setText("成都");
+                like_1.setText("苏州");
+                like_2.setText("厦门");
+                like_3.setText("桂林");
+                like_4.setText("深圳");
+                like_5.setText("成都");
+                like_6.setText("杭州");
                 break;
-            case "justin":
-                like_3.setText("洛杉矶");
+            case "abc":
+                like_1.setText("北京");
+                like_2.setText("广州");
+                like_3.setText("上海");
+                like_4.setText("深圳");
+                like_5.setText("澳门");
+                like_6.setText("香港");
                 break;
             case "default":
+                String[] local_1 = new String[]{"哈尔滨","黑龙江","北京","厦门","桂林","深圳","澳门"};
+                Random ran_1 = new Random(1);
+                int number_1 = ran_1.nextInt(7);
+                int number_2 = ran_1.nextInt(7);
+                int number_3 = ran_1.nextInt(7);
+                int number_4 = ran_1.nextInt(7);
+                int number_5 = ran_1.nextInt(7);
+                int number_6 = ran_1.nextInt(7);
+                like_1.setText(local_1[number_1]);
+                like_2.setText(local_1[number_2]);
+                like_3.setText(local_1[number_3]);
+                like_4.setText(local_1[number_4]);
+                like_5.setText(local_1[number_5]);
+                like_5.setText(local_1[number_6]);
+
+
+
                 break;
 
         }
