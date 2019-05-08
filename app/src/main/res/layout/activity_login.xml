@@ -31,7 +31,8 @@
         android:layout_marginTop="16dp"
         android:background="@color/loginbackgroud"
         android:hint="@string/password"
-        android:paddingLeft="8dp" />
+        android:paddingLeft="8dp"
+        android:inputType="textPassword"/>
 
     <!--<RelativeLayout-->
         <!--android:layout_width="320dp"-->
